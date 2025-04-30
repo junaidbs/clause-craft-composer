@@ -27,10 +27,10 @@ export const ClauseItem: React.FC<ClauseItemProps> = ({
       onDragStart={handleDragStart}
       onClick={() => onClick && onClick(clause)}
       className={`p-3 mb-2 cursor-pointer hover:shadow-md transition-shadow text-sm ${
-        isSelected ? 'ring-2 ring-clause' : ''
+        isSelected ? 'ring-2 ring-primary' : ''
       }`}
     >
-      <h4 className="font-medium mb-1 text-clause-dark">{clause.title}</h4>
+      <h4 className="font-medium mb-1 text-gray-900">{clause.title}</h4>
       <p className="text-gray-600 text-xs">{clause.content.length > 100 
         ? `${clause.content.substring(0, 100)}...` 
         : clause.content}

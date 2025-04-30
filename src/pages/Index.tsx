@@ -28,6 +28,10 @@ const Index = () => {
       };
       setSelectedClauses([...selectedClauses, templateClause]);
       setActiveClause(templateClause);
+      toast({
+        title: "Clause added",
+        description: "The clause has been added to your template."
+      });
     } else {
       // Select existing clause
       setActiveClause(selectedClauses[existingIndex]);
@@ -89,6 +93,7 @@ const Index = () => {
         <ClauseSidebar 
           categories={clauseCategories} 
           onDragStart={handleDragStart} 
+          onClauseSelect={handleClauseSelect}
         />
       </div>
       
